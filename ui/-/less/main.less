@@ -1,0 +1,86 @@
+.ui-dialog {
+    font-family: Verdana;
+
+    .ui-dialog-titlebar {
+        display: flex;
+        cursor: default;
+
+        .title {
+            white-space: nowrap;
+            flex-grow: 1;
+            padding: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: stretch;
+
+            .button {
+                cursor: pointer;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                padding: 0 10px;
+
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.2);
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+
+                &.close {
+
+                }
+
+                &.minimize {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    &.minimized {
+
+        .ui-dialog-titlebar {
+            border-radius: 3px;
+
+            .button.minimize {
+
+                .icon:before {
+                    content: '\f2d0';
+                }
+            }
+        }
+
+        .ui-dialog-content {
+
+        }
+    }
+
+    @handleSize: 7px;
+
+    .ui-resizable-n {
+        height: @handleSize;
+        top: 0;
+    }
+
+    .ui-resizable-e {
+        width: @handleSize;
+        right: 0;
+    }
+
+    .ui-resizable-s {
+        height: @handleSize;
+        bottom: 0;
+    }
+
+    .ui-resizable-w {
+        width: @handleSize;
+        left: 0;
+    }
+}
