@@ -1,3 +1,3 @@
 <?php return [
-    'namespace' => 'jquery\cookie'
+    'namespace' => 'js\jquery\cookie'
 ];
